@@ -64,7 +64,9 @@ const handler = NextAuth({
     async session({ session, token }) {
       // Add role to the session from the token
       if (token && session.user) {
+        // @ts-ignore
         session.user.role = token.role as string
+        // @ts-ignore
         session.user.id = token.id as string
       }
       return session

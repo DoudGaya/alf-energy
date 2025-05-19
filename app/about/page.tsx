@@ -164,7 +164,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <Award className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Market Leadership</h3>
                 <p className="text-muted-foreground">
@@ -174,7 +174,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <Lightbulb className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Innovation</h3>
                 <p className="text-muted-foreground">
@@ -184,7 +184,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <Globe className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Sustainability</h3>
                 <p className="text-muted-foreground">
@@ -194,7 +194,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <BarChart3 className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Growth</h3>
                 <p className="text-muted-foreground">
@@ -204,7 +204,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <Award className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Excellence</h3>
                 <p className="text-muted-foreground">
@@ -214,7 +214,7 @@ export default function AboutPage() {
             </Card>
 
             <Card className="border border-gray-200 dark:border-gray-800">
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <Users className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">Community</h3>
                 <p className="text-muted-foreground">
@@ -237,26 +237,49 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             <Card className="border-0 shadow-lg overflow-hidden">
-              <div className="relative h-64">
-                <Image src="/placeholder.svg?height=400&width=300" alt="Femi Kumuyi" fill className="object-cover" />
+          <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-8">
+             <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+              <div className="relative h-[350px] w-[350px] rounded-full">
+                <Image src="/placeholder.svg?height=400&width=300" alt="Femi Kumuyi" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Femi Kumuyi</h3>
                 <p className="text-sm text-muted-foreground mb-4">Managing Director</p>
-                {/* <p className="text-muted-foreground mb-4">
-                  An experienced IT consultant, Femi ensures our digital transformation and technological advancement
-                  remain cutting-edge.
-                </p> */}
+               
                 <div className="flex space-x-4">
-                  {/* <Link href="mailto:femi.kumuyi@alfenergyng.com" className="text-primary hover:underline">
-                    femi.kumuyi@alfenergyng.com
-                  </Link> */}
+                 
                 </div>
               </CardContent>
-            </Card>
-            <Card className="border-0 shadow-lg overflow-hidden">
+            </div>
+             
+              <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+              <div className="relative h-[350px] w-[350px] rounded-full">
+                <Image src="/placeholder.svg?height=400&width=300" alt="Dr. Nabilah Sani Mohammed" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+              </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
+                <p className="text-sm text-muted-foreground mb-4">Director, Corporate Services</p>
+               
+                <div className="flex space-x-4">
+                 
+                </div>
+              </CardContent>
+            </div>
+             <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+              <div className="relative h-[350px] w-[350px] rounded-full">
+                <Image src="/placeholder.svg?height=400&width=300" alt="Emeka Nwabudike" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+              </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
+                <p className="text-sm text-muted-foreground mb-4">Director,  Technical Services</p>
+               
+                <div className="flex space-x-4">
+                 
+                </div>
+              </CardContent>
+            </div>
+            
+            {/* <div className="border-0 shadow-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
                   src="/placeholder.svg?height=400&width=300"
@@ -265,22 +288,13 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
                 <p className="text-sm text-muted-foreground mb-4">Director, Corporate Services</p>
-                {/* <p className="text-muted-foreground mb-4">
-                  Brings extensive expertise in sustainable energy and public policy. She leads climate-smart
-                  initiatives and is currently pursuing her PhD.
-                </p> */}
-                {/* <div className="flex space-x-4">
-                  <Link href="mailto:nabilah.mohammed@alfenergyng.com" className="text-primary hover:underline">
-                    nabilah.mohammed@alfenergyng.com
-                  </Link>
-                </div> */}
-              </CardContent>
-            </Card>
 
-            <Card className="border-0 shadow-lg overflow-hidden">
+              </CardContent>
+            </div>
+            <div className="border-0 shadow-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
                   src="/placeholder.svg?height=400&width=300"
@@ -289,20 +303,15 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <CardContent className="p-6">
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
                 <p className="text-sm text-muted-foreground mb-4">Director,  Technical Services</p>
-                {/* <p className="text-muted-foreground mb-4">
-                  With over three decades of engineering excellence, Emeka brings international experience from Eni
-                  S.p.A. His leadership drives our technical operations.
-                </p> */}
+               
                 <div className="flex space-x-4">
-                  {/* <Link href="mailto:emeka.nwabudike@alfenergyng.com" className="text-primary hover:underline">
-                    emeka.nwabudike@alfenergyng.com
-                  </Link> */}
+                  
                 </div>
               </CardContent>
-            </Card>
+            </div> */}
 
            
           </div>

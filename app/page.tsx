@@ -8,12 +8,11 @@ import { Badge } from "@/components/ui/badge"
 import GallerySection from "@/components/gallery-section"
 import { ArrowRight, CheckCircle, Zap, Globe, BarChart3 } from "lucide-react"
 import NewsCarousel from "@/components/news-carousel"
-// @ts-ignore
-import anotherMinigrid from '@/public/images/solar-mini-grid-2.JPG'
+import anotherMinigrid from '@/public/images/farm-3.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 import banner from '@/public/banner.jpg'
 import minigrid from '@/public/images/minigrid.jpg'
-import colsultation from '@/public/images/consultation.jpg'
+import colsultation from '@/public/images/consultations.jpg'
 import TestimonialCarousel from "@/components/testimonial-carousel"
 
 export default function Home() {

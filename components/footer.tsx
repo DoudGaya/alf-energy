@@ -13,24 +13,24 @@ export default function Footer() {
             {/* <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-blue-600 bg-clip-text text-transparent mb-4">
               Alfuttaim Energy
             </h3> */}
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground text-gray-400 mb-4">
               Leading integrated energy solutions provider in Africa, driving sustainable development through innovative
               and responsible energy practices.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="#" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -38,35 +38,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
+            <h4 className="font-semibold text-lg mb-4 text-gray-200">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/about" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/projects" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/news" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   News & Events
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/blog" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
@@ -74,22 +74,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Services</h4>
+            <h4 className="font-semibold text-lg mb-4 text-gray-200">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/petroleum" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/petroleum" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Petroleum Operations
                 </Link>
               </li>
               <li>
-                <Link href="/services/renewable" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/renewable" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Renewable Energy
                 </Link>
               </li>
               <li>
                 <Link
                   href="/services/consulting"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground text-gray-400 hover:text-primary transition-colors"
                 >
                   Energy Consulting
                 </Link>
@@ -97,13 +97,13 @@ export default function Footer() {
               <li>
                 <Link
                   href="/services/sustainability"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground text-gray-400 hover:text-primary transition-colors"
                 >
                   Sustainability
                 </Link>
               </li>
               <li>
-                <Link href="/services/trading" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/trading" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Energy Trading
                 </Link>
               </li>
@@ -111,19 +111,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
+            <h4 className="font-semibold text-lg mb-4 text-gray-200">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-primary mt-0.5" />
-                <span className="text-muted-foreground">Headquarters, Lagos, Nigeria</span>
+                <span className="text-muted-foreground text-gray-400">Headquarters, Lagos, Nigeria</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">+234 803 281 9032</span>
+                <span className="text-muted-foreground text-gray-400">+234 803 281 9032</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">info@alfenergyng.com</span>
+                <span className="text-muted-foreground text-gray-400">info@alfenergyng.com</span>
               </li>
             </ul>
           </div>

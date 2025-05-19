@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle, Zap, Globe, Shield, BarChart3, Lightbulb, Droplet, Wind, Factory } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
 import minigrid from '@/public/images/minigrid.jpg'
-import colsultation from '@/public/images/consultation.jpg'
+import colsultation from '@/public/images/consultations.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 
 
@@ -64,8 +64,9 @@ export default function ServicesPage() {
               </p>
             </div> */}
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative h-[480px] rounded-lg overflow-hidden shadow-xl">
+             <div className=" flex flex-col justify-center items-center">
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative h-[420px] rounded-lg overflow-hidden shadow-xl">
                   <Image
                     src={petroleum}
                     alt="Petroleum Operations"
@@ -119,19 +120,20 @@ export default function ServicesPage() {
                       </p>
                     </div>
                   </div>
-
-                  <div className="mt-8 flex flex-col  items-center justify-center">
+                </div>
+              </div>
+               <div className="mt-8 flex flex-col  items-center justify-center">
                     <Button asChild>
                       <Link href="/contact">Inquire About Petroleum Services</Link>
                     </Button>
                   </div>
-                </div>
-              </div>
+             </div>
            </div>
             </TabsContent>
 
             <TabsContent value="renewable" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             <div className=" flex flex-col items-center justify-center">
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   {/* <h3 className="text-2xl font-bold mb-4">Renewable Energy Solutions</h3>
                   <p className="text-muted-foreground mb-6">
@@ -184,15 +186,9 @@ export default function ServicesPage() {
                       </p>
                     </div>
                   </div>
-
-                  <div className="mt-8 flex flex-col  items-center justify-center">
-                    <Button asChild>
-                      <Link href="/contact">Inquire About Renewable Energy Services</Link>
-                    </Button>
-                  </div>
                 </div>
 
-                <div className="relative h-[480px] rounded-lg overflow-hidden shadow-xl order-1 lg:order-2">
+                <div className="relative h-[420px] rounded-lg overflow-hidden shadow-xl order-1 lg:order-2">
                   <Image
                     src={minigrid}
                     alt="Renewable Energy Solutions"
@@ -201,11 +197,18 @@ export default function ServicesPage() {
                   />
                 </div>
               </div>
+              <div className="mt-8 flex flex-col  items-center justify-center">
+                    <Button asChild>
+                      <Link href="/contact">Inquire About Renewable Energy Services</Link>
+                    </Button>
+                  </div>
+             </div>
             </TabsContent>
 
             <TabsContent value="consulting" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="relative h-[480px] rounded-lg overflow-hidden shadow-xl">
+             <div className=" flex flex-col items-center justify-center">
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="relative h-[420px] rounded-lg overflow-hidden shadow-xl">
                   <Image
                     src={colsultation}
                     alt="Consulting Services"
@@ -266,14 +269,14 @@ export default function ServicesPage() {
                       </p>
                     </div>
                   </div>
-
-                  <div className="mt-8 flex flex-col  items-center justify-center">
+                </div>
+              </div>
+               <div className="mt-8 flex flex-col  items-center justify-center">
                     <Button asChild>
                       <Link href="/contact">Inquire About Consulting Services</Link>
                     </Button>
                   </div>
-                </div>
-              </div>
+             </div>
             </TabsContent>
           </Tabs>
         </div>
@@ -512,7 +515,7 @@ export default function ServicesPage() {
             <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Request a Consultation</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20" asChild>
+            <Button size="lg" variant="outline" className="border-white dark:text-white bg-white/10 text-gray-800 hover:bg-white/20" asChild>
               <Link href="/projects">View Our Projects</Link>
             </Button>
           </div>

@@ -1,10 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Sun, Moon } from "lucide-react"
+import Link from "next/link"
 import { useTheme } from "next-themes"
 import Image from "next/image"
 import logo from '@/public/alfutaim-logo.png'
@@ -88,7 +88,9 @@ export default function Header() {
             >
               {mounted && (theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />)}
             </Button>
-            <Button>Get in Touch</Button>
+            <Button>
+              <Link href={'/contact'}>Get in Touch</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}

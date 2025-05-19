@@ -52,7 +52,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <Badge className="mb-4">Our Contact Details</Badge>
+              {/* <Badge className="mb-4">Our Contact Details</Badge> */}
               <h2 className="text-3xl md:text-4xl font-bold mb-6">How to Reach Us</h2>
               <p className="text-muted-foreground mb-8">
                 Feel free to contact us through any of the following channels. Our team is ready to assist you with any
@@ -145,8 +145,8 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <Badge className="mb-4">Send Us a Message</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact Form</h2>
+              {/* <Badge className="mb-4">Send Us a Message</Badge> */}
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Send Us a Message</h2>
               <p className="text-muted-foreground mb-8">
                 Fill out the form below, and our team will get back to you as soon as possible.
               </p>
