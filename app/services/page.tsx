@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle, Zap, Globe, Shield, BarChart3, Lightbulb, Droplet, Wind, Factory } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
-import minigrid from '@/public/images/minigrid.jpg'
+import minigrid from '@/public/images/farm-3.jpg'
 import colsultation from '@/public/images/consultations.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 
