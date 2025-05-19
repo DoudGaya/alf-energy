@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import GallerySection from "@/components/gallery-section"
 import { ArrowRight, CheckCircle, Zap, Globe, BarChart3 } from "lucide-react"
 import NewsCarousel from "@/components/news-carousel"
 // @ts-ignore
@@ -193,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* News & Activities */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4">Latest Updates</Badge>
@@ -211,7 +212,9 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      {/* <GallerySection /> */}
 
       {/* Testimonials */}
       <section className="py-20">
@@ -239,7 +242,7 @@ export default function Home() {
             <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20" asChild>
+            <Button size="lg" variant="outline" className=" text-white bg-transparent hover:bg-white/20" asChild>
               <Link href="/about">Learn More About Us</Link>
             </Button>
           </div>

@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Users, Target, Award, Lightbulb, Globe, BarChart3 } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
-
+import aboutImage from '@/public/solar farm 1.jpg'
 
 const pageData = {
   title: "About Us",
@@ -100,7 +100,7 @@ export default function AboutPage() {
 
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=1000&width=800"
+                src={aboutImage}
                 alt="Alfuttaim Energy Team"
                 fill
                 className="object-cover"
@@ -245,10 +245,10 @@ export default function AboutPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-1">Femi Kumuyi</h3>
                 <p className="text-sm text-muted-foreground mb-4">Managing Director</p>
-                <p className="text-muted-foreground mb-4">
+                {/* <p className="text-muted-foreground mb-4">
                   An experienced IT consultant, Femi ensures our digital transformation and technological advancement
                   remain cutting-edge.
-                </p>
+                </p> */}
                 <div className="flex space-x-4">
                   {/* <Link href="mailto:femi.kumuyi@alfenergyng.com" className="text-primary hover:underline">
                     femi.kumuyi@alfenergyng.com
@@ -260,18 +260,18 @@ export default function AboutPage() {
               <div className="relative h-64">
                 <Image
                   src="/placeholder.svg?height=400&width=300"
-                  alt="Nabilah Mohammed"
+                  alt="Dr. Nabilah Sani Mohammed"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-1">Nabilah Mohammed</h3>
-                <p className="text-sm text-muted-foreground mb-4">Director </p>
-                <p className="text-muted-foreground mb-4">
+                <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
+                <p className="text-sm text-muted-foreground mb-4">Director, Corporate Services</p>
+                {/* <p className="text-muted-foreground mb-4">
                   Brings extensive expertise in sustainable energy and public policy. She leads climate-smart
                   initiatives and is currently pursuing her PhD.
-                </p>
+                </p> */}
                 {/* <div className="flex space-x-4">
                   <Link href="mailto:nabilah.mohammed@alfenergyng.com" className="text-primary hover:underline">
                     nabilah.mohammed@alfenergyng.com
@@ -291,15 +291,15 @@ export default function AboutPage() {
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
-                <p className="text-sm text-muted-foreground mb-4">Chief Technical Officer</p>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-sm text-muted-foreground mb-4">Director,  Technical Services</p>
+                {/* <p className="text-muted-foreground mb-4">
                   With over three decades of engineering excellence, Emeka brings international experience from Eni
                   S.p.A. His leadership drives our technical operations.
-                </p>
+                </p> */}
                 <div className="flex space-x-4">
-                  <Link href="mailto:emeka.nwabudike@alfenergyng.com" className="text-primary hover:underline">
+                  {/* <Link href="mailto:emeka.nwabudike@alfenergyng.com" className="text-primary hover:underline">
                     emeka.nwabudike@alfenergyng.com
-                  </Link>
+                  </Link> */}
                 </div>
               </CardContent>
             </Card>

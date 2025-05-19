@@ -11,6 +11,7 @@ import { MapPin, Phone, Mail, Clock, Send } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
 
 
+
 const pageData = {
   pageName: 'Contact Us',
   title: 'Get in Touch With Our Team',
@@ -67,7 +68,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold mb-1">Our Headquarters</h3>
-                        <p className="text-muted-foreground">Headquarters, Lagos, Nigeria</p>
+                        <p className="text-muted-foreground">26, Eric Moore close, Surulere Lagos, Nigeria</p>
                       </div>
                     </div>
                   </CardContent>
@@ -81,9 +82,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold mb-1">Phone Numbers</h3>
-                        <p className="text-muted-foreground mb-1">Nabilah Mohammed: +234 803 281 9032</p>
-                        <p className="text-muted-foreground mb-1">Emeka Nwabudike: +44 7880 343239</p>
-                        <p className="text-muted-foreground">Femi Kumuyi: +44 7775 210381</p>
+                        <p className="text-muted-foreground mb-1"> +234 803 281 9032</p>
+                        <p className="text-muted-foreground mb-1">+44 7880 343239</p>
+                        <p className="text-muted-foreground">+44 7775 210381</p>
                       </div>
                     </div>
                   </CardContent>

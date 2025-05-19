@@ -56,9 +56,9 @@ export default function TestimonialCarousel() {
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <div className="absolute -top-12 left-1/2 -translate-x-1/2 text-primary opacity-20">
-        <Quote className="h-24 w-24" />
-      </div>
+      {/* <div className="absolute -top-12 left-1/2 z-50 -translate-x-1/2 text-primary opacity-20">
+        <Quote className="h-24 w-24 z-50" />
+      </div> */}
 
       <div className="flex justify-between absolute top-1/2 -translate-y-1/2 left-0 right-0 z-10 px-4">
         <Button
