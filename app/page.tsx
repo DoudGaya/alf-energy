@@ -11,7 +11,7 @@ import NewsCarousel from "@/components/news-carousel"
 import anotherMinigrid from '@/public/images/farm-3.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 import banner from '@/public/banner.jpg'
-import minigrid from '@/public/images/minigrid.jpg'
+import minigrid from '@/public/images/farm-3.jpg'
 import colsultation from '@/public/images/consultations.jpg'
 import TestimonialCarousel from "@/components/testimonial-carousel"
 
