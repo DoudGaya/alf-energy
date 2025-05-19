@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Users, Target, Award, Lightbulb, Globe, BarChart3 } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
+import nabilah from '@/public/nabilah.png'
+import femi from '@/public/emeka.jpg'
+import emeka from '@/public/techguy.png'
 import aboutImage from '@/public/solar farm 1.jpg'
 
 const pageData = {
@@ -240,7 +243,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-8">
              <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src="/placeholder.svg?height=400&width=300" alt="Femi Kumuyi" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={femi} alt="Femi Kumuyi" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Femi Kumuyi</h3>
@@ -254,7 +257,7 @@ export default function AboutPage() {
              
               <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src="/placeholder.svg?height=400&width=300" alt="Dr. Nabilah Sani Mohammed" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={nabilah} alt="Dr. Nabilah Sani Mohammed" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
@@ -267,7 +270,7 @@ export default function AboutPage() {
             </div>
              <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src="/placeholder.svg?height=400&width=300" alt="Emeka Nwabudike" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={emeka} alt="Emeka Nwabudike" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
@@ -278,42 +281,6 @@ export default function AboutPage() {
                 </div>
               </CardContent>
             </div>
-            
-            {/* <div className="border-0 shadow-lg overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src="/placeholder.svg?height=400&width=300"
-                  alt="Dr. Nabilah Sani Mohammed"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
-                <p className="text-sm text-muted-foreground mb-4">Director, Corporate Services</p>
-
-              </CardContent>
-            </div>
-            <div className="border-0 shadow-lg overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src="/placeholder.svg?height=400&width=300"
-                  alt="Emeka Nwabudike"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
-                <p className="text-sm text-muted-foreground mb-4">Director,  Technical Services</p>
-               
-                <div className="flex space-x-4">
-                  
-                </div>
-              </CardContent>
-            </div> */}
-
-           
           </div>
         </div>
       </section>
