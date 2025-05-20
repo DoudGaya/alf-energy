@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ProjectMap from "@/components/project-map"
 import PublicBanner from "@/components/PublicBanner"
+import oil from '@/public/oil.jpg'
+import consulation from '@/public/consultant.jpg'
+import renewables from '@/public/solar farm 1.jpg'
 
 // Project data from the provided table
 const solarProjects = [
@@ -59,21 +62,21 @@ const otherProjects = [
     id: 1,
     title: "Oil & Gas Exploration",
     description: "Advanced geological surveys and resource assessment in the Niger Delta region.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: oil,
     category: "Petroleum",
   },
   {
     id: 2,
-    title: "Wind Energy Farm",
-    description: "Development of wind turbines for clean energy generation in coastal areas.",
-    image: "/placeholder.svg?height=400&width=600",
+    title: "Consulting for Renewable Energy",
+    description: "Advising clients on the integration of renewable energy sources into their operations.",
+    image: consulation,
     category: "Renewable",
   },
   {
     id: 3,
     title: "Energy Efficiency Consulting",
     description: "Helping industrial clients optimize their energy consumption and reduce costs.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: renewables,
     category: "Consulting",
   },
 ]
@@ -155,7 +158,7 @@ export default function ProjectsPage() {
                       <th className="px-4 py-3 text-left">Longitude</th>
                       <th className="px-4 py-3 text-left">Estimated PV Capacity (KWp)</th>
                       <th className="px-4 py-3 text-left">Batch</th>
-                      <th className="px-4 py-3 text-left">Actions</th>
+                      {/* <th className="px-4 py-3 text-left">Actions</th> */}
                     </tr>
                   </thead>
                   <tbody className="divide-y">
@@ -169,9 +172,9 @@ export default function ProjectsPage() {
                         <td className="px-4 py-3">{project.capacity}</td>
                         <td className="px-4 py-3">{project.batch || 1}</td>
                         <td className="px-4 py-3">
-                          <Button variant="outline" size="sm" asChild>
+                          {/* <Button variant="outline" size="sm" asChild>
                             <Link href={`/projects/${project.id}`}>View Details</Link>
-                          </Button>
+                          </Button> */}
                         </td>
                       </tr>
                     ))}

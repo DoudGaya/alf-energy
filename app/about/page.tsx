@@ -1,3 +1,6 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -6,9 +9,157 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Users, Target, Award, Lightbulb, Globe, BarChart3 } from "lucide-react"
 import PublicBanner from "@/components/PublicBanner"
 import nabilah from '@/public/nabilah.png'
-import femi from '@/public/emeka.jpg'
+import femi from '@/public/femi.png'
+import workers from '@/public/images/workerspng.png'
+import tunnels from '@/public/images/energy.jpg'
 import emeka from '@/public/techguy.png'
 import aboutImage from '@/public/solar farm 1.jpg'
+import TeamMemberModal, { type TeamMember } from "@/components/team-member-modal"
+
+// Team member data
+const teamMembers: TeamMember[] = [
+  {
+    id: "nabilah-mohammed",
+    name: "Nabilah Mohammed",
+    role: "Director, Corporate Services",
+    image: nabilah.src,
+    email: "nabilah.mohammed@alfenergyng.com",
+    phone: "+234 803 281 9032",
+    location: "Lagos, Nigeria",
+    linkedin: "#",
+    twitter: "#",
+    bio: "Nabilah Mohammed brings extensive expertise in sustainable energy and public policy to her role as Sustainability Director at Alfuttaim Energy Limited. With over 15 years of experience in the energy sector, she has been instrumental in developing and implementing the company's sustainability strategy.",
+    education: [
+      { degree: "PhD Candidate, Energy Policy", institution: "University of Lagos", year: "Current" },
+      { degree: "Master of Science, Environmental Engineering", institution: "Imperial College London", year: "2010" },
+      { degree: "Bachelor of Engineering, Chemical Engineering", institution: "University of Ibadan", year: "2006" },
+    ],
+    experience: [
+      { role: "Sustainability Director", company: "Alfuttaim Energy Limited", period: "2018 - Present" },
+      { role: "Environmental Consultant", company: "Global Energy Solutions", period: "2012 - 2018" },
+      { role: "Research Associate", company: "Nigerian Institute of Energy Research", period: "2010 - 2012" },
+    ],
+    expertise: [
+      "Sustainability Strategy Development",
+      "Environmental Impact Assessment",
+      "Renewable Energy Policy",
+      "Carbon Footprint Reduction",
+      "Stakeholder Engagement",
+      "Climate Change Mitigation",
+    ],
+    projects: [
+      {
+        name: "Solar Mini Grid Implementation",
+        description: "Led the sustainability aspects of our solar mini grid projects across multiple communities.",
+      },
+      {
+        name: "Corporate Carbon Neutrality Initiative",
+        description: "Spearheaded the company's efforts to achieve carbon neutrality by 2030.",
+      },
+      {
+        name: "Community Energy Education Program",
+        description:
+          "Developed and implemented educational programs on sustainable energy practices for local communities.",
+      },
+    ],
+  },
+  {
+    id: "emeka-nwabudike",
+    name: "Emeka Nwabudike",
+    role: "Director,  Technical Services",
+    image: emeka.src,
+    email: "emeka.nwabudike@alfenergyng.com",
+    phone: "+44 7880 343239",
+    location: "London, UK / Lagos, Nigeria",
+    linkedin: "#",
+    twitter: "#",
+    bio: "With over three decades of engineering excellence, Emeka brings international experience from Eni S.p.A and other major energy companies. His technical leadership has been crucial in implementing innovative technologies and ensuring operational excellence across all our projects.",
+    education: [
+      { degree: "PhD, Petroleum Engineering", institution: "University of Texas at Austin", year: "1995" },
+      { degree: "Master of Engineering, Energy Systems", institution: "Imperial College London", year: "1990" },
+      {
+        degree: "Bachelor of Science, Mechanical Engineering",
+        institution: "University of Nigeria, Nsukka",
+        year: "1986",
+      },
+    ],
+    experience: [
+      { role: "Chief Technical Officer", company: "Alfuttaim Energy Limited", period: "2015 - Present" },
+      { role: "Technical Director", company: "Eni S.p.A", period: "2005 - 2015" },
+      { role: "Senior Engineer", company: "Shell Petroleum", period: "1995 - 2005" },
+    ],
+    expertise: [
+      "Petroleum Engineering",
+      "Energy Systems Design",
+      "Project Management",
+      "Technical Due Diligence",
+      "Renewable Energy Integration",
+      "Process Optimization",
+    ],
+    projects: [
+      {
+        name: "Offshore Oil Platform Modernization",
+        description: "Led the technical aspects of modernizing legacy oil platforms with state-of-the-art technology.",
+      },
+      {
+        name: "Hybrid Energy Systems Development",
+        description: "Pioneered the development of hybrid energy systems combining traditional and renewable sources.",
+      },
+      {
+        name: "Technical Standards Implementation",
+        description: "Established comprehensive technical standards across all company operations.",
+      },
+    ],
+  },
+  {
+    id: "femi-kumuyi",
+    name: "Femi Kumuyi",
+    role: "Managing Director",
+    image: femi.src,
+    email: "femi.kumuyi@alfenergyng.com",
+    phone: "+44 7775 210381",
+    location: "London, UK",
+    linkedin: "#",
+    twitter: "#",
+    bio: "An experienced IT consultant with a focus on digital transformation in the energy sector, Femi ensures our technological infrastructure and digital initiatives remain cutting-edge. His expertise in data analytics and system integration has revolutionized our operational efficiency.",
+    education: [
+      { degree: "Master of Science, Computer Science", institution: "University College London", year: "2005" },
+      { degree: "Bachelor of Science, Information Systems", institution: "University of Manchester", year: "2001" },
+      {
+        degree: "Professional Certification, Project Management",
+        institution: "Project Management Institute",
+        year: "2008",
+      },
+    ],
+    experience: [
+      { role: "IT Director", company: "Alfuttaim Energy Limited", period: "2017 - Present" },
+      { role: "Senior IT Consultant", company: "Deloitte Digital", period: "2010 - 2017" },
+      { role: "Systems Analyst", company: "BP plc", period: "2005 - 2010" },
+    ],
+    expertise: [
+      "Digital Transformation",
+      "IT Strategy Development",
+      "Data Analytics",
+      "System Integration",
+      "Cybersecurity",
+      "Cloud Computing",
+    ],
+    projects: [
+      {
+        name: "Enterprise Resource Planning Implementation",
+        description: "Led the implementation of a comprehensive ERP system across all company operations.",
+      },
+      {
+        name: "IoT Monitoring System for Energy Assets",
+        description: "Developed and deployed IoT-based monitoring systems for remote energy assets.",
+      },
+      {
+        name: "Data Analytics Platform",
+        description: "Created a data analytics platform for optimizing energy production and distribution.",
+      },
+    ],
+  },
+]
 
 const pageData = {
   title: "About Us",
@@ -18,7 +169,23 @@ const pageData = {
 }
 
 export default function AboutPage() {
+
+    const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openMemberModal = (member: TeamMember) => {
+    setSelectedMember(member)
+    setIsModalOpen(true)
+  }
+
+  const closeMemberModal = () => {
+    setIsModalOpen(false)
+  }
+
+
   return (
+
+
     <div className="flex flex-col w-full">
 
       <PublicBanner pageName={pageData.title} title={pageData.title} subTitle={pageData.subTitle} />
@@ -241,46 +408,50 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto gap-8">
-             <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+           
+           {
+            teamMembers.map((member) =>  {
+              return (
+                  <div
+                   onClick={() => openMemberModal(member)}
+                  key={member.id} className="border-0 dark:bg-black py-6 rounded-lg flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src={femi} alt="Femi Kumuyi" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={member.image} alt={member.name} fill className="object-contain border-4 border-primary object-bottom rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-1">Femi Kumuyi</h3>
-                <p className="text-sm text-muted-foreground mb-4">Managing Director</p>
-               
-                <div className="flex space-x-4">
-                 
-                </div>
+                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4">{member.role}</p>
               </CardContent>
             </div>
+              )
+            })
+            }
+
              
-              <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+              {/* <div className="border-0 dark:bg-black py-6 rounded-lg flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src={nabilah} alt="Dr. Nabilah Sani Mohammed" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={nabilah} alt="Dr. Nabilah Sani Mohammed" fill className="object-cover border-4 border-primary rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Dr. Nabilah Sani Mohammed</h3>
-                <p className="text-sm text-muted-foreground mb-4">Director, Corporate Services</p>
+                <p className="text-sm text-muted-foreground mb-4"></p>
                
                 <div className="flex space-x-4">
                  
                 </div>
               </CardContent>
             </div>
-             <div className="border-0 flex items-center justify-center flex-col shadow-lg overflow-hidden">
+             <div className="border-0 dark:bg-black py-6 rounded-lg flex items-center justify-center flex-col shadow-lg overflow-hidden">
               <div className="relative h-[350px] w-[350px] rounded-full">
-                <Image src={emeka} alt="Emeka Nwabudike" fill className="object-cover rounded-full h-full w-full overflow-hidden" />
+                <Image src={emeka} alt="Emeka Nwabudike" fill className="object-contain border-4 border-primary rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-1">Emeka Nwabudike</h3>
-                <p className="text-sm text-muted-foreground mb-4">Director,  Technical Services</p>
+                <p className="text-sm text-muted-foreground mb-4"></p>
                
-                <div className="flex space-x-4">
-                 
-                </div>
+                
               </CardContent>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -318,7 +489,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-              <Image src="/placeholder.svg?height=800&width=600" alt="Our Impact" fill className="object-cover" />
+              <Image src={workers} alt="Our Impact" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -335,12 +506,15 @@ export default function AboutPage() {
             <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20" asChild>
+            <Button size="lg" variant="outline" className="border-white bg-white/10 text-white hover:bg-white/20" asChild>
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </div>
         </div>
       </section>
+      
+      {/* Team Member Modal */}
+      <TeamMemberModal member={selectedMember} isOpen={isModalOpen} onClose={closeMemberModal} />
     </div>
   )
 }
