@@ -19,6 +19,54 @@ import TeamMemberModal, { type TeamMember } from "@/components/team-member-modal
 // Team member data
 const teamMembers: TeamMember[] = [
   {
+    id: "femi-kumuyi",
+    name: "Femi Kumuyi",
+    role: "Managing Director",
+    image: femi.src,
+    email: "femi.kumuyi@alfenergyng.com",
+    phone: "+44 7775 210381",
+    location: "London, UK",
+    linkedin: "#",
+    twitter: "#",
+    bio: "An experienced IT consultant with a focus on digital transformation in the energy sector, Femi ensures our technological infrastructure and digital initiatives remain cutting-edge. His expertise in data analytics and system integration has revolutionized our operational efficiency.",
+    education: [
+      { degree: "Master of Science, Computer Science", institution: "University College London", year: "2005" },
+      { degree: "Bachelor of Science, Information Systems", institution: "University of Manchester", year: "2001" },
+      {
+        degree: "Professional Certification, Project Management",
+        institution: "Project Management Institute",
+        year: "2008",
+      },
+    ],
+    experience: [
+      { role: "IT Director", company: "Alfuttaim Energy Limited", period: "2017 - Present" },
+      { role: "Senior IT Consultant", company: "Deloitte Digital", period: "2010 - 2017" },
+      { role: "Systems Analyst", company: "BP plc", period: "2005 - 2010" },
+    ],
+    expertise: [
+      "Digital Transformation",
+      "IT Strategy Development",
+      "Data Analytics",
+      "System Integration",
+      "Cybersecurity",
+      "Cloud Computing",
+    ],
+    projects: [
+      {
+        name: "Enterprise Resource Planning Implementation",
+        description: "Led the implementation of a comprehensive ERP system across all company operations.",
+      },
+      {
+        name: "IoT Monitoring System for Energy Assets",
+        description: "Developed and deployed IoT-based monitoring systems for remote energy assets.",
+      },
+      {
+        name: "Data Analytics Platform",
+        description: "Created a data analytics platform for optimizing energy production and distribution.",
+      },
+    ],
+  },
+  {
     id: "nabilah-mohammed",
     name: "Nabilah Mohammed",
     role: "Director, Corporate Services",
@@ -111,54 +159,7 @@ const teamMembers: TeamMember[] = [
       },
     ],
   },
-  {
-    id: "femi-kumuyi",
-    name: "Femi Kumuyi",
-    role: "Managing Director",
-    image: femi.src,
-    email: "femi.kumuyi@alfenergyng.com",
-    phone: "+44 7775 210381",
-    location: "London, UK",
-    linkedin: "#",
-    twitter: "#",
-    bio: "An experienced IT consultant with a focus on digital transformation in the energy sector, Femi ensures our technological infrastructure and digital initiatives remain cutting-edge. His expertise in data analytics and system integration has revolutionized our operational efficiency.",
-    education: [
-      { degree: "Master of Science, Computer Science", institution: "University College London", year: "2005" },
-      { degree: "Bachelor of Science, Information Systems", institution: "University of Manchester", year: "2001" },
-      {
-        degree: "Professional Certification, Project Management",
-        institution: "Project Management Institute",
-        year: "2008",
-      },
-    ],
-    experience: [
-      { role: "IT Director", company: "Alfuttaim Energy Limited", period: "2017 - Present" },
-      { role: "Senior IT Consultant", company: "Deloitte Digital", period: "2010 - 2017" },
-      { role: "Systems Analyst", company: "BP plc", period: "2005 - 2010" },
-    ],
-    expertise: [
-      "Digital Transformation",
-      "IT Strategy Development",
-      "Data Analytics",
-      "System Integration",
-      "Cybersecurity",
-      "Cloud Computing",
-    ],
-    projects: [
-      {
-        name: "Enterprise Resource Planning Implementation",
-        description: "Led the implementation of a comprehensive ERP system across all company operations.",
-      },
-      {
-        name: "IoT Monitoring System for Energy Assets",
-        description: "Developed and deployed IoT-based monitoring systems for remote energy assets.",
-      },
-      {
-        name: "Data Analytics Platform",
-        description: "Created a data analytics platform for optimizing energy production and distribution.",
-      },
-    ],
-  },
+  
 ]
 
 const pageData = {
