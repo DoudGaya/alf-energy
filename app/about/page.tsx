@@ -514,7 +514,7 @@ export default function AboutPage() {
       </section>
       
       {/* Team Member Modal */}
-      <TeamMemberModal member={selectedMember} isOpen={isModalOpen} onClose={closeMemberModal} />
+      {/* <TeamMemberModal member={selectedMember} isOpen={isModalOpen} onClose={closeMemberModal} /> */}
     </div>
   )
 }
