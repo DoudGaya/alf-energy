@@ -62,7 +62,7 @@ const solarProjects = [
 const otherProjects = [
   {
     id: 1,
-    title: "Energy research",
+    title: "Energy Research",
     description: `Conduct cutting-edge research and develop innovative solutions to drive sustainable energy transitions, optimize systems and support informed decision-making across the energy value chain.
 `,
     image: research,
@@ -70,7 +70,7 @@ const otherProjects = [
   },
   {
     id: 2,
-    title: " Training and Capacity Building",
+    title: " Training & Capacity Building",
     description: `Empowering professionals and organizations with the knowledge, skills, and tools needed to excel in both traditional and renewable energy sectors. `,
     image: training,
     category: "Training",

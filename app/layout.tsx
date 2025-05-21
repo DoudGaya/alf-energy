@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alfuttaim Energy Limited",
+  title: "Alfuttaim Nigerian Limited",
   description:
     "Leading integrated energy solutions provider in Africa, driving sustainable development through innovative and responsible energy practices.",
     generator: 'v0.dev'

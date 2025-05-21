@@ -107,7 +107,7 @@ const pageData = {
   title: "About Us",
   subTitle: "Pioneering Sustainable Energy Solutions",
   description:
-    " Alfuttaim Energy Limited stands as a pioneering force in the energy sector, distinguished by our unwavering commitment to sustainable practices and innovative solutions.",
+    " Alfuttaim Nigerian Limited stands as a pioneering force in the energy sector, distinguished by our unwavering commitment to sustainable practices and innovative solutions.",
 }
 
 export default function AboutPage() {
@@ -354,7 +354,7 @@ export default function AboutPage() {
               <Badge className="mb-4">Our Impact</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Portfolio</h2>
               <p className="text-muted-foreground mb-8">
-                At Alfuttaim Energy Limited, we have built an impressive portfolio of successful projects and
+                At Alfuttaim Nigerian Limited, we have built an impressive portfolio of successful projects and
                 initiatives across various energy sectors, demonstrating our capability and commitment to excellence.
               </p>
 
@@ -390,7 +390,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Us in Creating a Sustainable Future</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Partner with Alfuttaim Energy Limited to drive innovation and sustainability in the energy sector.
+            Partner with Alfuttaim Nigerian Limited to drive innovation and sustainability in the energy sector.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100" asChild>
