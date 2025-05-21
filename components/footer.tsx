@@ -17,7 +17,7 @@ export default function Footer() {
               Leading integrated energy solutions provider in Africa, driving sustainable development through innovative
               and responsible energy practices.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link href="#" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
@@ -34,7 +34,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div>
@@ -60,7 +60,7 @@ export default function Footer() {
                   Projects
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/news" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   News & Events
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                 <Link href="/blog" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Blog
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -77,33 +77,33 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4 text-gray-200">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/petroleum" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
+                <Link href="/services" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Petroleum Operations
                 </Link>
               </li>
               <li>
-                <Link href="/services/renewable" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
+                <Link href="/services" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Renewable Energy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/consulting"
+                href="/services"
                   className="text-muted-foreground text-gray-400 hover:text-primary transition-colors"
                 >
                   Energy Consulting
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/sustainability"
+                {/* <Link
+                  href="/services"
                   className="text-muted-foreground text-gray-400 hover:text-primary transition-colors"
                 >
                   Sustainability
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/services/trading" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
+                <Link href="/services" className="text-muted-foreground text-gray-400 hover:text-primary transition-colors">
                   Energy Trading
                 </Link>
               </li>

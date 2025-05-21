@@ -6,9 +6,10 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ProjectMap from "@/components/project-map"
 import PublicBanner from "@/components/PublicBanner"
-import oil from '@/public/oil.jpg'
-import consulation from '@/public/consultant.jpg'
-import renewables from '@/public/solar farm 1.jpg'
+import research from '@/public/images/research.jpg'
+import training from '@/public/images/training 2.jpg'
+
+import digital from '@/public/solar farm 1.jpg'
 
 // Project data from the provided table
 const solarProjects = [
@@ -60,24 +61,25 @@ const solarProjects = [
 const otherProjects = [
   {
     id: 1,
-    title: "Oil & Gas Exploration",
-    description: "Advanced geological surveys and resource assessment in the Niger Delta region.",
-    image: oil,
-    category: "Petroleum",
+    title: "Energy research",
+    description: `Conduct cutting-edge research and develop innovative solutions to drive sustainable energy transitions, optimize systems and support informed decision-making across the energy value chain.
+`,
+    image: research,
+    category: "Research",
   },
   {
     id: 2,
-    title: "Consulting for Renewable Energy",
-    description: "Advising clients on the integration of renewable energy sources into their operations.",
-    image: consulation,
-    category: "Renewable",
+    title: " Training and Capacity building Building",
+    description: `Empowering professionals and organizations with the knowledge, skills, and tools needed to excel in both traditional and renewable energy sectors. `,
+    image: training,
+    category: "Training",
   },
   {
     id: 3,
-    title: "Energy Efficiency Consulting",
-    description: "Helping industrial clients optimize their energy consumption and reduce costs.",
-    image: renewables,
-    category: "Consulting",
+    title: "Digitalization & Energy Data Analytics",
+    description: `Offer digital transformation services for energy companies, utilizing AI, IoT, and machine learning to optimize operations.`,
+    image: digital,
+    category: "Analytics",
   },
 ]
 
@@ -156,8 +158,8 @@ export default function ProjectsPage() {
                       <th className="px-4 py-3 text-left">Local Govt</th>
                       <th className="px-4 py-3 text-left">Latitude</th>
                       <th className="px-4 py-3 text-left">Longitude</th>
-                      <th className="px-4 py-3 text-left">Estimated PV Capacity (KWp)</th>
-                      <th className="px-4 py-3 text-left">Batch</th>
+                      <th className="px-4 py-3 text-end">Estimated PV Capacity (KWp)</th>
+                      {/* <th className="px-4 py-3 text-left">Batch</th> */}
                       {/* <th className="px-4 py-3 text-left">Actions</th> */}
                     </tr>
                   </thead>
@@ -169,8 +171,8 @@ export default function ProjectsPage() {
                         <td className="px-4 py-3">{project.localGovt}</td>
                         <td className="px-4 py-3">{project.latitude}</td>
                         <td className="px-4 py-3">{project.longitude}</td>
-                        <td className="px-4 py-3">{project.capacity}</td>
-                        <td className="px-4 py-3">{project.batch || 1}</td>
+                        <td className="px-4 py-3 text-end">{project.capacity}</td>
+                        {/* <td className="px-4 py-3">{project.batch || 1}</td> */}
                         <td className="px-4 py-3">
                           {/* <Button variant="outline" size="sm" asChild>
                             <Link href={`/projects/${project.id}`}>View Details</Link>
@@ -210,18 +212,18 @@ export default function ProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherProjects.map((project) => (
               <Card key={project.id} className="overflow-hidden border-0 shadow-md">
-                <div className="relative h-48">
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                <div className="relative h-[300px]">
+                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover object-bottom" />
                   <div className="absolute top-4 left-4">
-                    <Badge>{project.category}</Badge>
+                    {/* <Badge>{project.category}</Badge> */}
                   </div>
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <Button variant="outline" asChild>
+                  {/* <Button variant="outline" asChild>
                     <Link href={`/projects/other/${project.id}`}>View Project</Link>
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             ))}

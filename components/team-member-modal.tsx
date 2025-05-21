@@ -15,7 +15,7 @@ export interface TeamMember {
   role: string
   image: string
   email: string
-  phone: string
+//   phone: string
   location: string
   bio: string
   linkedin?: string
@@ -65,11 +65,11 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
         </DialogHeader>
 
         <Tabs defaultValue="bio" value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid grid-cols-4 mb-6">
+          <TabsList className="grid grid-cols-3 mb-6">
             <TabsTrigger value="bio">Biography</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="projects">Projects</TabsTrigger>
+            {/* <TabsTrigger value="projects">Projects</TabsTrigger> */}
           </TabsList>
 
           <TabsContent value="bio" className="space-y-6">
@@ -95,12 +95,12 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
                   {member.email}
                 </a>
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-primary" />
                 <a href={`tel:${member.phone}`} className="hover:underline">
                   {member.phone}
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 mr-3 text-primary" />
                 <span>{member.location}</span>
@@ -161,7 +161,7 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
             </div>
           </TabsContent>
 
-          <TabsContent value="projects" className="space-y-6">
+          {/* <TabsContent value="projects" className="space-y-6">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
               <Award className="h-6 w-6 mr-2 text-primary" />
               Key Projects
@@ -174,7 +174,7 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
                 </div>
               ))}
             </div>
-          </TabsContent>
+          </TabsContent> */}
         </Tabs>
       </DialogContent>
     </Dialog>
