@@ -76,7 +76,7 @@ const otherProjects = [
   },
   {
     id: 3,
-    title: "Digitalization & Energy Data Analytics",
+    title: "Digitalization & Data Analytics",
     description: `Offer digital transformation services for energy companies, utilizing AI, IoT, and machine learning to optimize operations.`,
     image: digital,
     category: "Analytics",
@@ -96,30 +96,6 @@ export default function ProjectsPage() {
     <div className="flex flex-col w-full">
       <PublicBanner pageName={pageData.pagename} title={pageData.title} subTitle={pageData.subTitle} />
       {/* Hero Section */}
-      {/* <section className="relative py-20 md:py-28 bg-gray-900 text-white">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/placeholder.svg?height=600&width=1920"
-            alt="Projects Background"
-            fill
-            className="object-cover opacity-30"
-          />
-        </div>
-
-        <div className="container mx-auto px-4 z-10 relative">
-          <div className="max-w-3xl">
-            <Badge className="mb-4" variant="outline">
-              Our Projects
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Transforming Energy Landscapes</h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Explore our portfolio of innovative energy projects that are making a positive impact on communities and
-              the environment.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Featured Solar Mini Grid Projects */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
