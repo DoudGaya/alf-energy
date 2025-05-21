@@ -306,7 +306,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4">Our Story</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">About Alfuttaim Nig. Limited</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">About Alfuttaim Nigiria Limited</h2>
               <p className="text-muted-foreground mb-6">
                 Since our establishment, we have built a reputation for excellence through our integrated approach to
                 energy solutions—combining traditional petroleum expertise with forward-thinking renewable energy
