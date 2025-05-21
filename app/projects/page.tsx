@@ -95,8 +95,6 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col w-full">
       <PublicBanner pageName={pageData.pagename} title={pageData.title} subTitle={pageData.subTitle} />
-      {/* Hero Section */}
-      {/* Featured Solar Mini Grid Projects */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

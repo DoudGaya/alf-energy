@@ -5,33 +5,37 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import musaddiq from '@/public/images/musaddiq.png'
+import kb from '@/public/images/Kabir.png'
+import daddy from '@/public/daddy.jpeg'
+
 import { motion, AnimatePresence } from "framer-motion"
 
 // Mock testimonial data
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Kabir Bello",
     role: "CEO, orangeTech Solutions",
     content:
       "Alfuttaim Energy's expertise in renewable energy solutions has been instrumental in our transition to sustainable operations. Their team's professionalism and knowledge are unmatched in the industry.",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: kb.src,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Director, Urban Development Authority",
+    name: "Musaddiq Magashi",
+    role: "Director, Acmegrid Technologies Limited",
     content:
       "The solar mini grid project implemented by Alfuttaim Energy has transformed our community's access to reliable electricity. Their commitment to quality and sustainability is evident in every aspect of their work.",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: musaddiq.src,
   },
   {
     id: 3,
-    name: "Amina Okafor",
-    role: "Sustainability Manager, Global Manufacturing",
+    name: "Abdulrahman Dauda",
+    role: "Stablebricks Limited",
     content:
       "Working with Alfuttaim Energy on our energy efficiency initiatives has resulted in significant cost savings and reduced environmental impact. Their innovative approach and attention to detail exceeded our expectations.",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: daddy.src,
   },
 ]
 

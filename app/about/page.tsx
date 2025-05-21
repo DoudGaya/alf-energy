@@ -501,7 +501,7 @@ export default function AboutPage() {
                   <div
                    onClick={() => openMemberModal(member)}
                   key={member.id} className="border-0 dark:bg-black py-6 rounded-lg flex items-center justify-center flex-col shadow-lg overflow-hidden">
-              <div className="relative h-[350px] w-[350px] rounded-full">
+              <div className="relative w-[250px] h-[250px] md:h-[350px] md:w-[350px] rounded-full">
                 <Image src={member.image} alt={member.name} fill className="object-contain border-4 border-primary/30 object-bottom rounded-full h-full w-full overflow-hidden" />
               </div>
               <CardContent className="p-6 text-center">

@@ -11,7 +11,7 @@ import NewsCarousel from "@/components/news-carousel"
 import anotherMinigrid from '@/public/images/farm-3.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 import banner from '@/public/banner.jpg'
-import minigrid from '@/public/banner.jpg'
+import minigrid from '@/public/images/minigrid-ng.jpg'
 import colsultation from '@/public/images/consultations.jpg'
 import TestimonialCarousel from "@/components/testimonial-carousel"
 
@@ -78,11 +78,6 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-lg transition-all duration-300 border-0 bg-white dark:bg-gray-800 shadow-md overflow-hidden">
               <Image src={petroleum}  alt="Petroleum Operations" className="object-cover h-[250px] w-full object-center relative overflow-hidden" />
-              {/* <div className="h-48 bg-gradient-to-r from-orange-400 to-blue-500 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
-                  <Zap className="h-16 w-16" />
-                </div>
-              </div> */}
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                   Petroleum Operations
@@ -98,12 +93,7 @@ export default function Home() {
             </Card>
 
             <Card className="group hover:shadow-lg transition-all duration-300 border-0 bg-white dark:bg-gray-800 shadow-md overflow-hidden">
-                 <Image src={minigrid}  alt="Petroleum Operations" className="object-cover h-[250px] w-full object-center relative overflow-hidden" />
-              {/* <div className="h-48 bg-gradient-to-r from-blue-400 to-teal-500 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
-                  <Globe className="h-16 w-16" />
-                </div>
-              </div> */}
+                 <Image src={minigrid}  alt="Petroleum Operations" className="object-cover h-[250px] w-full object-bottom relative overflow-hidden" />
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Renewable Energy</h3>
                 <p className="text-muted-foreground mb-4">
@@ -118,11 +108,7 @@ export default function Home() {
 
             <Card className="group hover:shadow-lg transition-all duration-300 border-0 bg-white dark:bg-gray-800 shadow-md overflow-hidden">
               <Image src={colsultation}  alt="Petroleum Operations" className="object-cover h-[250px] w-full object-center relative overflow-hidden" />
-              {/* <div className="h-48 bg-gradient-to-r from-purple-400 to-pink-500 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white">
-                  <BarChart3 className="h-16 w-16" />
-                </div>
-              </div> */}
+             
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Energy Consulting</h3>
                 <p className="text-muted-foreground mb-4">
