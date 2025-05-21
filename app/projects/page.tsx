@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import ProjectMap from "@/components/project-map"
 import PublicBanner from "@/components/PublicBanner"
+import digitalization from '@/public/digitalization.jpg'
 import research from '@/public/images/research.jpg'
 import training from '@/public/images/training 2.jpg'
 
@@ -69,7 +70,7 @@ const otherProjects = [
   },
   {
     id: 2,
-    title: " Training and Capacity building Building",
+    title: " Training and Capacity Building",
     description: `Empowering professionals and organizations with the knowledge, skills, and tools needed to excel in both traditional and renewable energy sectors. `,
     image: training,
     category: "Training",
@@ -78,7 +79,7 @@ const otherProjects = [
     id: 3,
     title: "Digitalization & Data Analytics",
     description: `Offer digital transformation services for energy companies, utilizing AI, IoT, and machine learning to optimize operations.`,
-    image: digital,
+    image: digitalization,
     category: "Analytics",
   },
 ]
@@ -189,15 +190,11 @@ export default function ProjectsPage() {
                 <div className="relative h-[300px]">
                   <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover object-bottom" />
                   <div className="absolute top-4 left-4">
-                    {/* <Badge>{project.category}</Badge> */}
                   </div>
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
-                  {/* <Button variant="outline" asChild>
-                    <Link href={`/projects/other/${project.id}`}>View Project</Link>
-                  </Button> */}
                 </CardContent>
               </Card>
             ))}

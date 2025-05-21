@@ -86,7 +86,7 @@ export default function Home() {
                   Expert services in petroleum product distribution, refining, processing, and exploration with a focus
                   on efficiency and sustainability.
                 </p>
-                <Link href="/services/petroleum" className="inline-flex items-center text-primary font-medium">
+                <Link href="/services" className="inline-flex items-center text-primary font-medium">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </CardContent>
@@ -100,7 +100,7 @@ export default function Home() {
                   Innovative solutions in solar, wind, and biomass energy development, including energy storage systems
                   and grid integration.
                 </p>
-                <Link href="/services/renewable" className="inline-flex items-center text-primary font-medium">
+                <Link href="/services" className="inline-flex items-center text-primary font-medium">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </CardContent>
@@ -115,7 +115,7 @@ export default function Home() {
                   Strategic business services, market analysis, risk management, and regulatory compliance guidance for
                   energy sector clients.
                 </p>
-                <Link href="/services/consulting" className="inline-flex items-center text-primary font-medium">
+                <Link href="/services" className="inline-flex items-center text-primary font-medium">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </CardContent>

@@ -23,16 +23,17 @@ const teamMembers = [
     name: "Femi Kumuyi",
     role: "Managing Director",
     image: femi.src,
-    email: '',
+    email: 'Femi.kumuyi@alfenergyng.com',
     // phone: "",
-    location: "",
+    location: "United Kingdom",
     linkedin: "#",
     bio: "Femi is a seasoned IT consultant with over 20 years of global industry experience. A graduate of the University of Greenwich, he has led and contributed to a wide range of high-impact IT projects across multiple continents. His core expertise lies in technology strategy, systems architecture, and digital transformation, where he consistently delivers innovative solutions to complex business challenges. Femi has a strong track record in project management, software development, and IT consultancy, partnering with diverse organisations to optimise operations and accelerate growth. Deeply passionate about emerging technologies, he is committed to continuous professional development and actively mentors the next generation of tech professionals.",
     education: [
       { degree: "BSc, Information Technology", institution: "University of Greenwich", year: "" }
     ],
     experience: [
-      { role: "IT Consultant", company: "Various global firms", period: "20+ years" }
+      { role: "IT Consultant", company: "Various global firms", period: "20+ years" },
+      { role: "Managing Director", company: "Alfuttaim Nigeria Limited", period: "Present" },
     ],
     expertise: [
       "Technology Strategy",
@@ -48,7 +49,7 @@ const teamMembers = [
     name: "Dr. Nabilah Sani Mohammed",
     role: "Director, Corporate Services",
     image: nabilah.src,
-    email: "nabilah.sani@cosmopolitanuni.edu.ng",
+    email: "nabilah.mohammed@alfenergyng.com",
     // phone: "",
     location: "Abuja, Nigeria",
     linkedin: "http://linkedin.com/in/nabilah-sani-mohammed-41b665145",
@@ -78,7 +79,7 @@ const teamMembers = [
     name: "Engr. Emeka Nwabudike",
     role: "Director, Technical Services",
     image: emeka.src,
-    email: "",
+    email: "Emeka.nwabudike@alfenergyng.com",
     // phone: "",
     location: "United Kingdom",
     linkedin: "#",
@@ -101,151 +102,6 @@ const teamMembers = [
     ],
   }
 ];
-
-// const teamMembers: TeamMember[] = [
-//   {
-//     id: "femi-kumuyi",
-//     name: "Femi Kumuyi",
-//     role: "Managing Director",
-//     image: femi.src,
-//     email: "femi.kumuyi@alfenergyng.com",
-//     phone: "+44 7775 210381",
-//     location: "London, UK",
-//     linkedin: "#",
-//     // twitter: "#",
-//     bio: "An experienced IT consultant with a focus on digital transformation in the energy sector, Femi ensures our technological infrastructure and digital initiatives remain cutting-edge. His expertise in data analytics and system integration has revolutionized our operational efficiency.",
-//     education: [
-//       { degree: "Master of Science, Computer Science", institution: "University College London", year: "2005" },
-//       { degree: "Bachelor of Science, Information Systems", institution: "University of Manchester", year: "2001" },
-//       {
-//         degree: "Professional Certification, Project Management",
-//         institution: "Project Management Institute",
-//         year: "2008",
-//       },
-//     ],
-//     experience: [
-//       { role: "IT Director", company: "Alfuttaim Nig. Limited", period: "2017 - Present" },
-//       { role: "Senior IT Consultant", company: "Deloitte Digital", period: "2010 - 2017" },
-//       { role: "Systems Analyst", company: "BP plc", period: "2005 - 2010" },
-//     ],
-//     expertise: [
-//       "Digital Transformation",
-//       "IT Strategy Development",
-//       "Data Analytics",
-//       "System Integration",
-//       "Cybersecurity",
-//       "Cloud Computing",
-//     ],
-//     projects: [
-//       {
-//         name: "Enterprise Resource Planning Implementation",
-//         description: "Led the implementation of a comprehensive ERP system across all company operations.",
-//       },
-//       {
-//         name: "IoT Monitoring System for Energy Assets",
-//         description: "Developed and deployed IoT-based monitoring systems for remote energy assets.",
-//       },
-//       {
-//         name: "Data Analytics Platform",
-//         description: "Created a data analytics platform for optimizing energy production and distribution.",
-//       },
-//     ],
-//   },
-//   {
-//     id: "nabilah-mohammed",
-//     name: "Dr. Nabilah Mohammed",
-//     role: "Director, Corporate Services",
-//     image: nabilah.src,
-//     email: "nabilah.mohammed@alfenergyng.com",
-//     phone: "+234 803 281 9032",
-//     location: "Lagos, Nigeria",
-//     linkedin: "#",
-//     // twitter: "#",
-//     bio: "Nabilah Mohammed brings extensive expertise in sustainable energy and public policy to her role as Sustainability Director at Alfuttaim Energy Limited. With over 15 years of experience in the energy sector, she has been instrumental in developing and implementing the company's sustainability strategy.",
-//     education: [
-//       { degree: "PhD Candidate, Energy Policy", institution: "University of Lagos", year: "Current" },
-//       { degree: "Master of Science, Environmental Engineering", institution: "Imperial College London", year: "2010" },
-//       { degree: "Bachelor of Engineering, Chemical Engineering", institution: "University of Ibadan", year: "2006" },
-//     ],
-//     experience: [
-//       { role: "Sustainability Director", company: "Alfuttaim Energy Limited", period: "2018 - Present" },
-//       { role: "Environmental Consultant", company: "Global Energy Solutions", period: "2012 - 2018" },
-//       { role: "Research Associate", company: "Nigerian Institute of Energy Research", period: "2010 - 2012" },
-//     ],
-//     expertise: [
-//       "Sustainability Strategy Development",
-//       "Environmental Impact Assessment",
-//       "Renewable Energy Policy",
-//       "Carbon Footprint Reduction",
-//       "Stakeholder Engagement",
-//       "Climate Change Mitigation",
-//     ],
-//     projects: [
-//       {
-//         name: "Solar Mini Grid Implementation",
-//         description: "Led the sustainability aspects of our solar mini grid projects across multiple communities.",
-//       },
-//       {
-//         name: "Corporate Carbon Neutrality Initiative",
-//         description: "Spearheaded the company's efforts to achieve carbon neutrality by 2030.",
-//       },
-//       {
-//         name: "Community Energy Education Program",
-//         description:
-//           "Developed and implemented educational programs on sustainable energy practices for local communities.",
-//       },
-//     ],
-//   },
-//   {
-//     id: "emeka-nwabudike",
-//     name: "Emeka Nwabudike",
-//     role: "Director,  Technical Services",
-//     image: emeka.src,
-//     email: "emeka.nwabudike@alfenergyng.com",
-//     phone: "+44 7880 343239",
-//     location: "London, UK / Lagos, Nigeria",
-//     linkedin: "#",
-//     // twitter: "#",
-//     bio: "With over three decades of engineering excellence, Emeka brings international experience from Eni S.p.A and other major energy companies. His technical leadership has been crucial in implementing innovative technologies and ensuring operational excellence across all our projects.",
-//     education: [
-//       { degree: "PhD, Petroleum Engineering", institution: "University of Texas at Austin", year: "1995" },
-//       { degree: "Master of Engineering, Energy Systems", institution: "Imperial College London", year: "1990" },
-//       {
-//         degree: "Bachelor of Science, Mechanical Engineering",
-//         institution: "University of Nigeria, Nsukka",
-//         year: "1986",
-//       },
-//     ],
-//     experience: [
-//       { role: "Chief Technical Officer", company: "Alfuttaim Energy Limited", period: "2015 - Present" },
-//       { role: "Technical Director", company: "Eni S.p.A", period: "2005 - 2015" },
-//       { role: "Senior Engineer", company: "Shell Petroleum", period: "1995 - 2005" },
-//     ],
-//     expertise: [
-//       "Petroleum Engineering",
-//       "Energy Systems Design",
-//       "Project Management",
-//       "Technical Due Diligence",
-//       "Renewable Energy Integration",
-//       "Process Optimization",
-//     ],
-//     // projects: [
-//     //   {
-//     //     name: "Offshore Oil Platform Modernization",
-//     //     description: "Led the technical aspects of modernizing legacy oil platforms with state-of-the-art technology.",
-//     //   },
-//     //   {
-//     //     name: "Hybrid Energy Systems Development",
-//     //     description: "Pioneered the development of hybrid energy systems combining traditional and renewable sources.",
-//     //   },
-//     //   {
-//     //     name: "Technical Standards Implementation",
-//     //     description: "Established comprehensive technical standards across all company operations.",
-//     //   },
-//     // ],
-//   },
-  
-// ]
 
 const pageData = {
   title: "About Us",
@@ -273,40 +129,14 @@ export default function AboutPage() {
 
 
     <div className="flex flex-col w-full">
-
       <PublicBanner pageName={pageData.title} title={pageData.title} subTitle={pageData.subTitle} />
-      {/* Hero Section */}
-      {/* <section className="relative py-20 md:py-28 bg-gray-900 text-white">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/placeholder.svg?height=600&width=1920"
-            alt="About Us Background"
-            fill
-            className="object-cover opacity-30"
-          />
-        </div>
-
-        <div className="container mx-auto px-4 z-10 relative">
-          <div className="max-w-3xl">
-            <Badge className="mb-4" variant="outline">
-              About Us
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Pioneering Sustainable Energy Solutions</h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Alfuttaim Energy Limited stands as a pioneering force in the energy sector, distinguished by our
-              unwavering commitment to sustainable practices and innovative solutions.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Company Overview */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4">Our Story</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">About Alfuttaim Nigiria Limited</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">About Alfuttaim Nigeria Limited</h2>
               <p className="text-muted-foreground mb-6">
                 Since our establishment, we have built a reputation for excellence through our integrated approach to
                 energy solutions—combining traditional petroleum expertise with forward-thinking renewable energy
