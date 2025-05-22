@@ -294,7 +294,7 @@ export default function ServicesPage() {
             <Badge className="mb-4">Why Choose Us</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Competitive Advantage</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              What sets Alfuttaim Nigerian Limited apart from other energy service providers.
+              What sets Alfuttaim Nigeria Limited apart from other energy service providers.
             </p>
           </div>
 

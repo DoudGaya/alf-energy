@@ -37,7 +37,7 @@ export default function Home() {
               Powering a Sustainable Future Through Innovation
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-8">
-              Alfuttaim Nigerian Limited delivers reliable, sustainable, and innovative energy solutions while creating
+              Alfuttaim Nigeria Limited delivers reliable, sustainable, and innovative energy solutions while creating
               value for our stakeholders.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -208,7 +208,7 @@ export default function Home() {
             <Badge className="mb-4">Testimonials</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Hear from our satisfied clients about their experience working with Alfuttaim Nigerian Limited.
+              Hear from our satisfied clients about their experience working with Alfuttaim Nigeria Limited.
             </p>
           </div>
 
