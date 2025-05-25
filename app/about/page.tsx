@@ -369,7 +369,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-center">
                   <p className="text-4xl font-bold text-primary mb-2">1.5</p>
-                  <p className="text-muted-foreground">Wp of Solar Capacity</p>
+                  <p className="text-muted-foreground">MWp of Solar Capacity</p>
                 </div>
                 <div className="text-center">
                   <p className="text-4xl font-bold text-primary mb-2">11</p>
