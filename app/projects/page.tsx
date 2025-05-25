@@ -163,7 +163,7 @@ export default function ProjectsPage() {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-6">
-              Our solar mini grid projects have a total capacity of over 1,000 KWp, providing clean energy to thousands
+              Our solar mini grid projects have a total capacity of over 1.5 MWp, providing clean energy to thousands
               of residents across multiple communities.
             </p>
             <Button asChild>
@@ -203,17 +203,17 @@ export default function ProjectsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Interested in Our Energy Solutions?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-muted-foreground">
+          <p className="text-xl mb-8 max-w-2xl text mx-auto">
             Contact us today to discuss how we can help you achieve your energy goals with our innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
               <Link href="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className=" bg-transparent border-2" asChild>
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </div>
