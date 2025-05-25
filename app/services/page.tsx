@@ -515,7 +515,7 @@ export default function ServicesPage() {
             <Button size="lg" variant="default" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Request a Consultation</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white dark:text-white bg-white/10 text-gray-800 hover:bg-white/20" asChild>
+            <Button size="lg" variant="outline" className=" text-white bg-transparent hover:bg-white/20" asChild>
               <Link href="/projects">View Our Projects</Link>
             </Button>
           </div>

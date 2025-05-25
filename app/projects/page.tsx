@@ -133,7 +133,7 @@ export default function ProjectsPage() {
                       <th className="px-4 py-3 text-left">Local Govt</th>
                       <th className="px-4 py-3 text-left">Latitude</th>
                       <th className="px-4 py-3 text-left">Longitude</th>
-                      <th className="px-4 py-3 text-end">Estimated PV Capacity (KWp)</th>
+                      <th className="px-4 py-3 text-end">Estimated PV Capacity (MWp)</th>
                       {/* <th className="px-4 py-3 text-left">Batch</th> */}
                       {/* <th className="px-4 py-3 text-left">Actions</th> */}
                     </tr>
@@ -210,10 +210,10 @@ export default function ProjectsPage() {
             Contact us today to discuss how we can help you achieve your energy goals with our innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" className=" bg-transparent border-2" asChild>
+            <Button size="lg" variant="outline" className=" text-white bg-transparent hover:bg-white/20"  asChild>
               <Link href="/services">Explore Our Services</Link>
             </Button>
           </div>

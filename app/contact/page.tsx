@@ -234,17 +234,17 @@ export default function ContactPage() {
       <section className="py-16 md:py-24 bg-gradient-to-r from-orange-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start a Conversation?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-muted-foreground">
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             Our team is eager to discuss how we can help you achieve your energy goals. Contact us today to get started.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-white text-primary hover:bg-gray-100">
               <Link href="tel:+2348032819032">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Us Now
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button size="lg" variant="outline" className=" text-white bg-transparent hover:bg-white/20"  asChild>
               <Link href="mailto:info@alfenergyng.com">
                 <Mail className="h-4 w-4 mr-2" />
                 Email Us

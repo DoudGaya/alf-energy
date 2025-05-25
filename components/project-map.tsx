@@ -127,7 +127,7 @@ export default function ProjectMap({ projects }: ProjectMapProps) {
               <div class="p-3">
                 <h3 class="font-bold text-lg">${project.community}</h3>
                 <p class="text-sm text-gray-600">Local Govt: ${project.localGovt}</p>
-                <p class="text-sm text-gray-600">Capacity: ${project.capacity} KWp</p>
+                <p class="text-sm text-gray-600">Capacity: ${project.capacity} MWp</p>
                 <p class="text-sm text-gray-600">Batch: ${project.batch || 1}</p>
                 <p class="text-sm text-gray-600">Coordinates: ${project.latitude.toFixed(6)}, ${project.longitude.toFixed(6)}</p>
               </div>
