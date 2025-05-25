@@ -496,7 +496,7 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-orange-500 mr-2 mt-0.5" />
-                  <span>Community energy initiatives</span>
+                  <span>Community energy initiatives</span> 
                 </li>
               </ul>
             </div>
