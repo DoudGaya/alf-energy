@@ -10,10 +10,64 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alfuttaim Nigeria Limited",
+  title: {
+    default: "Alfuttaim Energy - Powering a Sustainable Future",
+    template: "%s | Alfuttaim Energy",
+  },
   description:
-    "Leading integrated energy solutions provider in Africa, driving sustainable development through innovative and responsible energy practices.",
-    generator: 'v0.dev'
+    "Leading integrated energy solutions provider in Nigeria, delivering sustainable development through innovative petroleum operations, renewable energy projects, and strategic energy consulting services.",
+  keywords: [
+    "energy solutions",
+    "renewable energy",
+    "petroleum operations",
+    "solar energy",
+    "Nigeria energy",
+    "sustainable energy",
+    "energy consulting",
+    "mini grid",
+    "Alfuttaim"
+  ],
+  authors: [{ name: "Alfuttaim Energy" }],
+  creator: "Alfuttaim Energy",
+  publisher: "Alfuttaim Energy",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://alfuttaim-energy.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alfuttaim-energy.com",
+    title: "Alfuttaim Energy - Powering a Sustainable Future",
+    description: "Leading integrated energy solutions provider in Nigeria, delivering sustainable development through innovative energy solutions.",
+    siteName: "Alfuttaim Energy",
+    images: [
+      {
+        url: "/public-banner.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alfuttaim Energy - Powering a Sustainable Future",
+    description: "Leading integrated energy solutions provider in Nigeria.",
+    images: ["/public-banner.jpg"],
+    creator: "@alfuttaim_energy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+  generator: 'Next.js'
 }
 
 export default function RootLayout({

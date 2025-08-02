@@ -4,9 +4,17 @@ import imageUrlBuilder from "@sanity/image-url"
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "your-project-id",
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  apiVersion: "2023-05-03",
+  apiVersion: "2025-08-02",
   useCdn: process.env.NODE_ENV === "production",
 })
+
+// Configuration for Sanity Studio
+export const config = {
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "your-project-id",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  apiVersion: "2025-08-02",
+  useCdn: process.env.NODE_ENV === "production",
+}
 
 // Helper function for generating image URLs with the Sanity Image pipeline
 const builder = imageUrlBuilder(client)
@@ -57,12 +65,55 @@ export async function getAllNews() {
       _id,
       title,
       slug,
-      excerpt,
+      overview,
       mainImage,
       publishedAt,
       "categories": categories[]->title
     }
   `)
+}
+
+// Fetch latest news items (for homepage)
+export async function getLatestNews(count: number = 4) {
+  return client.fetch(`
+    *[_type == "news"] | order(publishedAt desc)[0...${count}] {
+      _id,
+      title,
+      slug,
+      overview,
+      mainImage,
+      publishedAt,
+      "categories": categories[]->title
+    }
+  `)
+}
+
+// Fetch paginated news
+export async function getPaginatedNews(page: number = 1, pageSize: number = 6) {
+  const start = (page - 1) * pageSize
+  const end = start + pageSize
+  
+  const [news, total] = await Promise.all([
+    client.fetch(`
+      *[_type == "news"] | order(publishedAt desc)[${start}...${end}] {
+        _id,
+        title,
+        slug,
+        overview,
+        mainImage,
+        publishedAt,
+        "categories": categories[]->title
+      }
+    `),
+    client.fetch(`count(*[_type == "news"])`)
+  ])
+  
+  return {
+    news,
+    total,
+    hasMore: end < total,
+    totalPages: Math.ceil(total / pageSize)
+  }
 }
 
 // Fetch a single news item by slug
@@ -73,6 +124,7 @@ export async function getNewsBySlug(slug: string) {
       _id,
       title,
       slug,
+      overview,
       body,
       mainImage,
       publishedAt,
@@ -81,6 +133,34 @@ export async function getNewsBySlug(slug: string) {
   `,
     { slug },
   )
+}
+
+// Fetch all gallery items
+export async function getAllGallery() {
+  return client.fetch(`
+    *[_type == "gallery"] | order(_createdAt desc) {
+      _id,
+      title,
+      description,
+      image,
+      category,
+      _createdAt
+    }
+  `)
+}
+
+// Fetch latest gallery items (for homepage)
+export async function getLatestGallery(count: number = 6) {
+  return client.fetch(`
+    *[_type == "gallery"] | order(_createdAt desc)[0...${count}] {
+      _id,
+      title,
+      description,
+      image,
+      category,
+      _createdAt
+    }
+  `)
 }
 
 // Fetch all projects

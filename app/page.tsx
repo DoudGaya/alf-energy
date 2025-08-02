@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import GallerySection from "@/components/gallery-section"
-import { ArrowRight, CheckCircle, Zap, Globe, BarChart3 } from "lucide-react"
+import NewsSection from "@/components/news-section"
+import AnimatedCounter from "@/components/animated-counter"
+import { ArrowRight, CheckCircle, Zap, Globe, BarChart3, Users, Award, Leaf } from "lucide-react"
 import NewsCarousel from "@/components/news-carousel"
 import anotherMinigrid from '@/public/images/farm-3.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
@@ -59,6 +61,61 @@ export default function Home() {
         <div className="absolute bottom-8 left-0 right-0 flex justify-center">
           <div className="animate-bounce">
             <ArrowRight className="h-6 w-6 text-white rotate-90" />
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section with Animated Counters */}
+      <section className="py-16 md:py-24 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-white text-primary">Our Impact</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Making a Difference</h2>
+            <p className="text-white/80 max-w-2xl mx-auto">
+              Through our innovative energy solutions, we're creating measurable impact across communities and industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
+                <Zap className="h-8 w-8" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">
+                <AnimatedCounter end={1000} suffix="+" />
+              </div>
+              <p className="text-white/80">KWp Capacity</p>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
+                <Users className="h-8 w-8" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">
+                <AnimatedCounter end={10000} suffix="+" />
+              </div>
+              <p className="text-white/80">Connections Provided</p>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
+                <Globe className="h-8 w-8" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">
+                <AnimatedCounter end={11} suffix="+" />
+              </div>
+              <p className="text-white/80">Communities Served</p>
+            </div>
+
+            <div className="text-center">
+              <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
+                <Leaf className="h-8 w-8" />
+              </div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">
+                <AnimatedCounter end={50} suffix="%" />
+              </div>
+              <p className="text-white/80">Carbon Reduction</p>
+            </div>
           </div>
         </div>
       </section>
@@ -179,27 +236,9 @@ export default function Home() {
       </section>
 
       {/* News & Activities */}
-      {/* <section className="py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4">Latest Updates</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">News & Activities</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Stay updated with our latest news, events, and activities in the energy sector.
-            </p>
-          </div>
+      <NewsSection />
 
-          <NewsCarousel />
-
-          <div className="text-center mt-12">
-            <Button variant="outline" asChild>
-              <Link href="/news">View All News</Link>
-            </Button>
-          </div>
-        </div>
-      </section> */}
-
-      {/* <GallerySection /> */}
+      <GallerySection />
 
       {/* Testimonials */}
       <section className="py-20">
