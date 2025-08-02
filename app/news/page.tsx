@@ -64,7 +64,7 @@ export default async function NewsPage({ searchParams }: NewsPageProps) {
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                {news.map((item) => (
+                {news.map((item: any) => (
                   <Card key={item._id} className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-shadow">
                     <div className="relative h-48">
                       <Image
