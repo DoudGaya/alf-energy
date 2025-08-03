@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"
 
-const inter = Inter({ subsets: ["latin"] })
+// Use system fonts as fallback for build issues
+const fontClass = "font-sans"
 
 export const metadata: Metadata = {
   title: {
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Alfuttaim Energy" }],
   creator: "Alfuttaim Energy",
   publisher: "Alfuttaim Energy",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://alfuttaim-energy.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://alfenergyng.com.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alfuttaim-energy.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://alfenergyng.com.com",
     title: "Alfuttaim Energy - Powering a Sustainable Future",
     description: "Leading integrated energy solutions provider in Nigeria, delivering sustainable development through innovative energy solutions.",
     siteName: "Alfuttaim Energy",
@@ -77,7 +77,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={fontClass}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <Header />

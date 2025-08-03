@@ -17,7 +17,7 @@ export function generateSEO({
   type = 'website',
   publishedTime,
 }: SEOProps): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alfuttaim-energy.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://alfenergyng.com.com'
   const fullUrl = url ? `${siteUrl}${url}` : siteUrl
   const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`
 
