@@ -49,7 +49,7 @@ export default function NewsSection() {
               Get the latest updates on our energy projects and industry insights.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(4)].map((_, i) => (
               <Card key={i} className="overflow-hidden">
                 <div className="h-48 bg-gray-200 dark:bg-gray-700 animate-pulse" />
@@ -77,7 +77,7 @@ export default function NewsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {news.map((item) => (
             <Card key={item._id} className="overflow-hidden border-0 shadow-md hover:shadow-lg transition-shadow">
               <div className="relative h-48">

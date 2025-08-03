@@ -10,7 +10,7 @@ import NewsSection from "@/components/news-section"
 import AnimatedCounter from "@/components/animated-counter"
 import { ArrowRight, CheckCircle, Zap, Globe, BarChart3, Users, Award, Leaf } from "lucide-react"
 import NewsCarousel from "@/components/news-carousel"
-import anotherMinigrid from '@/public/images/farm-3.jpg'
+import anotherMinigrid from '@/public/home-page-card.jpg'
 import petroleum from '@/public/images/farm-3.jpg'
 import banner from '@/public/banner.jpg'
 import minigrid from '@/public/images/minigrid-ng.jpg'
@@ -102,7 +102,7 @@ export default function Home() {
                 <Globe className="h-8 w-8" />
               </div>
               <div className="text-4xl md:text-5xl font-bold mb-2">
-                <AnimatedCounter end={11} suffix="+" />
+                <AnimatedCounter end={10} suffix="+" />
               </div>
               <p className="text-white/80">Communities Served</p>
             </div>
@@ -228,7 +228,7 @@ export default function Home() {
                 src={anotherMinigrid}
                 alt="Solar Mini Grid Project"
                 fill
-                className="object-cover object-bottom"
+                className="object-cover object-center"
               />
             </div>
           </div>

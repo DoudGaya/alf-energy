@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -11,10 +11,31 @@ import PublicBanner from "@/components/PublicBanner"
 import nabilah from '@/public/nabilah.png'
 import femi from '@/public/femi.png'
 import workers from '@/public/images/workerspng.png'
-import tunnels from '@/public/images/energy.jpg'
 import emeka from '@/public/techguy.png'
 import aboutImage from '@/public/solar farm 1.jpg'
 import TeamMemberModal, { type TeamMember } from "@/components/team-member-modal"
+
+// CountUpAnimation component
+const CountUpAnimation = ({ end, duration }: { end: number; duration: number }) => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return // Skip on server-side
+    
+    let startTime: number
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp
+      const progress = Math.min((timestamp - startTime) / duration, 1)
+      setCount(Math.floor(progress * end))
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+    requestAnimationFrame(animate)
+  }, [end, duration])
+
+  return <span className="text-4xl font-bold text-primary">{count}</span>
+}
 
 // Team member data
 const teamMembers = [
@@ -360,19 +381,21 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-8">
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-2">25+</p>
+                  <CountUpAnimation end={25} duration={2000} />
+                  <p className="text-4xl font-bold text-primary mb-2">+</p>
                   <p className="text-muted-foreground">Successful Projects</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-2">130+</p>
+                  <CountUpAnimation end={130} duration={2000} />
+                  <p className="text-4xl font-bold text-primary mb-2">+</p>
                   <p className="text-muted-foreground">Environmental Impact Assessments</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-2">1.5</p>
+                  <CountUpAnimation end={1.5} duration={2000} />
                   <p className="text-muted-foreground">MWp of Solar Capacity</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-primary mb-2">11</p>
+                  <CountUpAnimation end={14} duration={2000} />
                   <p className="text-muted-foreground">Communities Served</p>
                 </div>
               </div>
@@ -384,7 +407,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-orange-500 to-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
