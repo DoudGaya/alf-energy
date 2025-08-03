@@ -75,17 +75,105 @@ const portableTextComponents = {
     ),
   },
   block: {
-    h1: ({ children }: any) => <h1 className="text-3xl font-bold my-6">{children}</h1>,
-    h2: ({ children }: any) => <h2 className="text-2xl font-bold my-5">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-xl font-bold my-4">{children}</h3>,
-    h4: ({ children }: any) => <h4 className="text-lg font-bold my-3">{children}</h4>,
+    // Paragraphs with proper spacing and formatting
+    normal: ({ children }: any) => (
+      <p className="mb-6 text-base leading-relaxed text-gray-700 dark:text-gray-300 first:mt-0 text-justify">
+        {children}
+      </p>
+    ),
+    // Headings with proper hierarchy
+    h1: ({ children }: any) => (
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-12 first:mt-0 text-gray-900 dark:text-gray-100 leading-tight">
+        {children}
+      </h1>
+    ),
+    h2: ({ children }: any) => (
+      <h2 className="text-2xl md:text-3xl font-bold mb-5 mt-10 text-gray-900 dark:text-gray-100 leading-tight">
+        {children}
+      </h2>
+    ),
+    h3: ({ children }: any) => (
+      <h3 className="text-xl md:text-2xl font-bold mb-4 mt-8 text-gray-900 dark:text-gray-100 leading-tight">
+        {children}
+      </h3>
+    ),
+    h4: ({ children }: any) => (
+      <h4 className="text-lg md:text-xl font-semibold mb-3 mt-6 text-gray-900 dark:text-gray-100 leading-tight">
+        {children}
+      </h4>
+    ),
+    h5: ({ children }: any) => (
+      <h5 className="text-base md:text-lg font-semibold mb-3 mt-4 text-gray-900 dark:text-gray-100">
+        {children}
+      </h5>
+    ),
+    h6: ({ children }: any) => (
+      <h6 className="text-base font-semibold mb-2 mt-4 text-gray-900 dark:text-gray-100">
+        {children}
+      </h6>
+    ),
+    // Blockquotes with enhanced styling
     blockquote: ({ children }: any) => (
-      <blockquote className="border-l-4 border-primary pl-6 my-6 italic text-lg">{children}</blockquote>
+      <blockquote className="border-l-4 border-primary bg-gray-50 dark:bg-gray-800 pl-6 pr-4 py-4 my-8 italic text-lg text-gray-700 dark:text-gray-300 rounded-r-md relative">
+        <div className="absolute -left-2 -top-2 text-6xl text-primary/20 font-serif leading-none">"</div>
+        {children}
+      </blockquote>
+    ),
+  },
+  list: {
+    // Bulleted lists
+    bullet: ({ children }: any) => (
+      <ul className="mb-6 ml-6 space-y-3 list-disc marker:text-primary">
+        {children}
+      </ul>
+    ),
+    // Numbered lists
+    number: ({ children }: any) => (
+      <ol className="mb-6 ml-6 space-y-3 list-decimal marker:text-primary">
+        {children}
+      </ol>
+    ),
+  },
+  listItem: {
+    // List items with proper spacing
+    bullet: ({ children }: any) => (
+      <li className="text-base leading-relaxed text-gray-700 dark:text-gray-300 pl-2">
+        {children}
+      </li>
+    ),
+    number: ({ children }: any) => (
+      <li className="text-base leading-relaxed text-gray-700 dark:text-gray-300 pl-2">
+        {children}
+      </li>
     ),
   },
   marks: {
+    // Strong/bold text
+    strong: ({ children }: any) => (
+      <strong className="font-semibold text-gray-900 dark:text-gray-100">
+        {children}
+      </strong>
+    ),
+    // Emphasis/italic text
+    em: ({ children }: any) => (
+      <em className="italic text-gray-700 dark:text-gray-300">
+        {children}
+      </em>
+    ),
+    // Code formatting
+    code: ({ children }: any) => (
+      <code className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded text-sm font-mono text-primary">
+        {children}
+      </code>
+    ),
+    // Links with enhanced styling
     link: ({ children, value }: any) => (
-      <a href={value.href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+      <a 
+        href={value.href} 
+        className="text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary/60 underline-offset-2 transition-colors duration-200" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
         {children}
       </a>
     ),
@@ -158,12 +246,10 @@ export default async function NewsDetailPage({ params }: NewsPageProps) {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none dark:prose-invert">
+            <div className="news-content prose prose-lg prose-gray max-w-none dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-7 prose-li:text-gray-700 dark:prose-li:text-gray-300">
               {news.body && <PortableText value={news.body} components={portableTextComponents} />}
             </div>
-
             <Separator className="my-12" />
-
             {/* Share Section */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
               <div>

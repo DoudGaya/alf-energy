@@ -66,22 +66,22 @@ export default function Home() {
       </section>
 
       {/* Stats Section with Animated Counters */}
-      <section className="py-16 md:py-24 bg-primary text-white">
+      <section className="py-16 md:py-16 w-full mx-auto text-white bg-primary">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center ">
             <Badge className="mb-4 bg-white text-primary">Our Impact</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Making a Difference</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-xl font-bold">Making a Difference</h2>
+            <p className="text-white/80 max-w-xl mx-auto">
               Through our innovative energy solutions, we're creating measurable impact across communities and industries.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
-                <Zap className="h-8 w-8" />
+                <Zap className="h-6 w-6" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">
+              <div className="text-4xl md:text-3xl font-bold mb-2">
                 <AnimatedCounter end={1000} suffix="+" />
               </div>
               <p className="text-white/80">KWp Capacity</p>
@@ -89,9 +89,9 @@ export default function Home() {
 
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
-                <Users className="h-8 w-8" />
+                <Users className="h-6 w-6" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">
+              <div className="text-4xl md:text-3xl font-bold mb-2">
                 <AnimatedCounter end={10000} suffix="+" />
               </div>
               <p className="text-white/80">Connections Provided</p>
@@ -99,9 +99,9 @@ export default function Home() {
 
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
-                <Globe className="h-8 w-8" />
+                <Globe className="h-6 w-6" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">
+              <div className="text-4xl md:text-3xl font-bold mb-2">
                 <AnimatedCounter end={10} suffix="+" />
               </div>
               <p className="text-white/80">Communities Served</p>
@@ -109,9 +109,9 @@ export default function Home() {
 
             <div className="text-center">
               <div className="flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mx-auto mb-4">
-                <Leaf className="h-8 w-8" />
+                <Leaf className="h-6 w-6" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">
+              <div className="text-4xl md:text-3xl font-bold mb-2">
                 <AnimatedCounter end={50} suffix="%" />
               </div>
               <p className="text-white/80">Carbon Reduction</p>

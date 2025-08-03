@@ -77,9 +77,7 @@ export default function GallerySection() {
           {gallery.map((item, index) => (
             <Card
               key={item._id}
-              className={`overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 ${
-                index === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
+              className={`overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 `}
             >
               <div className={`relative overflow-hidden ${index === 0 ? "aspect-square" : "aspect-square"}`}>
                 <Image

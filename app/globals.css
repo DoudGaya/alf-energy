@@ -259,6 +259,59 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Enhanced prose styles for news articles */
+.news-content {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.news-content p {
+  text-align: justify;
+  hyphens: auto;
+  line-height: 1.75;
+}
+
+.news-content h1,
+.news-content h2,
+.news-content h3,
+.news-content h4,
+.news-content h5,
+.news-content h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.news-content blockquote {
+  font-style: italic;
+  position: relative;
+}
+
+.news-content blockquote::before {
+  content: '"';
+  font-size: 4rem;
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  opacity: 0.1;
+  font-family: serif;
+}
+
+.news-content ul li,
+.news-content ol li {
+  padding-left: 0.5rem;
+}
+
+.news-content code {
+  font-family: 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', 'Courier New', monospace;
+  font-size: 0.875em;
+}
+
+/* Better text selection */
+.news-content ::selection {
+  background-color: hsl(var(--primary) / 0.2);
+}
+
 /* Custom styles for page transitions */
 .page-transition-enter {
   opacity: 0;
