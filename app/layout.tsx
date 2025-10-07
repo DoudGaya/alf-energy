@@ -1,12 +1,11 @@
 import type React from "react"
 import type { Metadata } from "next"
+// @ts-ignore
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { Toaster } from "@/components/ui/toaster"
-import { Toaster as SonnerToaster } from "@/components/ui/sonner"
-import { VisitorWelcomeModal } from "@/components/visitor-welcome-modal"
+import { ClientProviders } from "@/components/client-providers"
 
 // Use system fonts as fallback for build issues
 const fontClass = "font-sans"
@@ -86,9 +85,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
-          <VisitorWelcomeModal />
-          <Toaster />
-          <SonnerToaster />
+          <ClientProviders />
         </ThemeProvider>
       </body>
     </html>
