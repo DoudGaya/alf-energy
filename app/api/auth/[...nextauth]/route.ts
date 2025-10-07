@@ -1,6 +1,6 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
-import { compare } from "bcrypt"
+import { compare } from "bcryptjs"
 import { client } from "@/lib/sanity"
 
 // Define the shape of the user object
@@ -30,7 +30,7 @@ const handler = NextAuth({
           email: credentials.email,
         })
 
-        if (!user || !user.password) {
+        if (!user || !user.password || typeof user.password !== 'string') {
           throw new Error("User not found")
         }
 

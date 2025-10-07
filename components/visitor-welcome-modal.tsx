@@ -124,7 +124,7 @@ export function VisitorWelcomeModal() {
                   <FormItem>
                     <FormLabel>First Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="John" {...field} />
+                      <Input placeholder="First Name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -138,7 +138,7 @@ export function VisitorWelcomeModal() {
                   <FormItem>
                     <FormLabel>Last Name *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Doe" {...field} />
+                      <Input placeholder="Last Name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -189,7 +189,7 @@ export function VisitorWelcomeModal() {
             />
 
             <div className="flex justify-end gap-3 pt-4">
-              <Button
+              {/* <Button
                 type="button"
                 variant="outline"
                 onClick={() => {
@@ -199,7 +199,7 @@ export function VisitorWelcomeModal() {
                 disabled={isSubmitting}
               >
                 Skip for now
-              </Button>
+              </Button> */}
               <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 Submit
