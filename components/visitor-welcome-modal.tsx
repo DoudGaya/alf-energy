@@ -34,9 +34,7 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address.",
   }),
-  companyName: z.string().min(2, {
-    message: "Company name must be at least 2 characters.",
-  }),
+  companyName: z.string().optional(),
   phoneNumber: z.string().min(10, {
     message: "Phone number must be at least 10 characters.",
   }),
@@ -165,7 +163,7 @@ export function VisitorWelcomeModal() {
               name="companyName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company Name *</FormLabel>
+                  <FormLabel>Company Name (Optional)</FormLabel>
                   <FormControl>
                     <Input placeholder="Your Company Name" {...field} />
                   </FormControl>
