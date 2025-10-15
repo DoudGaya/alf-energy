@@ -7,7 +7,7 @@ import { Toaster as SonnerToaster } from "sonner"
 export function ClientProviders() {
   return (
     <>
-      <VisitorWelcomeModal />
+      {/* <VisitorWelcomeModal /> */}
       <Toaster />
       <SonnerToaster />
     </>

@@ -35,6 +35,7 @@ const handler = NextAuth({
         }
 
         // Compare the provided password with the stored hash
+        // @ts-ignore
         const isValid = await compare(credentials.password, user.password)
 
         if (!isValid) {
