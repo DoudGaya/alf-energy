@@ -42,7 +42,8 @@ const pageData = {
 }
 
 export default async function NewsPage({ searchParams }: NewsPageProps) {
-  const currentPage = Number(searchParams.page) || 1
+  const { page } = await searchParams
+  const currentPage = Number(page) || 1
   const { news, total, totalPages, hasMore } = await getPaginatedNews(currentPage, 9)
 
   return (

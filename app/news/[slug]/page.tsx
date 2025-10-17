@@ -15,15 +15,16 @@ interface NewsPageProps {
 }
 
 export async function generateMetadata({ params }: NewsPageProps): Promise<Metadata> {
-  const news = await getNewsBySlug(params.slug)
-  
+  const { slug } = await params;
+  const news = await getNewsBySlug(slug);
+
   if (!news) {
     return {
       title: "News Not Found - Alfuttaim Energy",
-    }
+    };
   }
 
-  const imageUrl = news.mainImage ? urlFor(news.mainImage).width(1200).height(630).url() : "/public-banner.jpg"
+  const imageUrl = news.mainImage ? urlFor(news.mainImage).width(1200).height(630).url() : "/public-banner.jpg";
 
   return {
     title: `${news.title} - Alfuttaim Energy`,
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: NewsPageProps): Promise<Metad
       description: news.overview,
       images: [imageUrl],
     },
-  }
+  };
 }
 
 export async function generateStaticParams() {
@@ -181,13 +182,14 @@ const portableTextComponents = {
 }
 
 export default async function NewsDetailPage({ params }: NewsPageProps) {
-  const news = await getNewsBySlug(params.slug)
+  const { slug } = await params;
+  const news = await getNewsBySlug(slug);
 
   if (!news) {
-    notFound()
+    notFound();
   }
 
-  const shareUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://alfeneryng.com'}/news/${params.slug}`
+  const shareUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://alfeneryng.com'}/news/${slug}`;
 
   return (
     <div className="flex flex-col w-full">
